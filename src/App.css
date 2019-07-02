@@ -1,33 +1,42 @@
-.App {
+.App{
+  margin: 5rem;
+  padding: 2rem;
+  box-sizing: 30%;
   text-align: center;
+  display: inline;
+
+}
+.task{
+  margin-top: 5rem;
+}
+.inputTask{
+  width: 30%;
+  background: #f0f3f3;
+  font-size: 16px;
+  border: 2px solid #30d1c9;
+  border-radius: 5px;
+  padding: 5px;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+
+.addTask{
+  background: #30d1c9;
+  font-size: 26px;
+  border: 2px solid #30d1c9;
+  border-radius: 7px;
+  margin-top: 45px;
+  margin-left: 2px;
+  cursor: pointer;
+  color: #f0f3f3;
+  padding: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.addTask:hover, .addTask:focus, .addTask:active{
+  
+  background: #047786; 
+  border: 2px solid #047786;
+  color: #23f53f;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

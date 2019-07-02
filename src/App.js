@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
+export default class  App  extends Component{
+  constructor(prop){
+    super(prop);
+  this.state = {
+    list: [
+      {"todo": "Read 1 paper on Computer Vision"},
+      { "todo": " Read articles on Machine Learning " }
+    ]
+  }
+}
+
+createNewToDoItem = () => {
+    
+  this.setState( ({ list, todo }) => ({
+        list: [
+            ...list,
+          {
+            todo
+          }
+        ],
+        todo: ''
+      })
+    );
+  };
+  handleInput = e =>{
+    e.preventDefault();
+    this.setState({
+      todo: e.target.value
+    })
+  }
+
+render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="task">
+      <input className="inputTask" type="text" placeholder="What do you want to do later?" value = {this.state.todo } onChange = {this.handleInput}/>
+      <button type="submit" className="addTask" > + </button>
+      </div>
+      <div className="tasks">
+        {this.state.list.map(i =><li key={i}>i</li>)}
+      </div>
     </div>
   );
 }
 
-export default App;
+}
+
