@@ -41,10 +41,11 @@
 .tasks{
   margin: 5rem;
 }
-.tasks ul li{
+.tasks li{
   list-style-type: decimal;
   font-size: 14px;
   color: #073561;
+  margin: 1rem;
 }
 .tasks{
   

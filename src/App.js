@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Button from 'react-bootstrap/Button';
 
 export default class  App  extends Component{
   constructor(prop){
@@ -54,13 +55,10 @@ render(){
       <div className="task">
       <input className="inputTask" type="text" placeholder="What do you want to do later?" value = {this.state.todo } onChange = {this.handleInput}/>
       <button type="submit" className="addTask" onClick={this.createNewToDoItem} onKeyPress={this.handleKeyPress}> + </button>
-      </div>
-      <div className="tasks">
-      <ul>
-      {this.state.list.map(todo =><li key={todo}></li>)} <button type="submit" deleteItem={this.deleteItem.bind(this)}>X</button>
-      </ul>
-       
-      </div>
+      </div> 
+      <ul className="tasks">
+      {this.state.list.map(todo =><li key={todo}></li>)} <Button variant ="danger" oncl={this.deleteItem.bind(this)}>X</Button>
+      </ul> 
     </div>
   );
 }
