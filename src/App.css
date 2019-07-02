@@ -38,5 +38,16 @@
   border: 2px solid #047786;
   color: #23f53f;
 }
-
+.tasks{
+  margin: 5rem;
+}
+.tasks ul li{
+  list-style-type: decimal;
+  font-size: 14px;
+  color: #073561;
+}
+.tasks{
+  
+  background-color: #f1f1f1;
+}
 

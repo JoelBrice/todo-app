@@ -31,16 +31,35 @@ createNewToDoItem = () => {
       todo: e.target.value
     })
   }
+  deleteItem = indexToDelete => {
+    
+    this.setState(({ list }) => ({
+          list: list.filter((toDo, index) => index !== indexToDelete)
+        }));
+    };
+//Handle Keyboard
+  handleKeyPress = (e) => {
+      if (e.key === 'Enter') {
+      this.createNewToDoItem();
+      }
+      };handleKeyPress = (e) => {
+      if (e.key === 'Enter') {
+      this.createNewToDoItem();
+      }
+};
 
 render(){
   return (
     <div className="App">
       <div className="task">
       <input className="inputTask" type="text" placeholder="What do you want to do later?" value = {this.state.todo } onChange = {this.handleInput}/>
-      <button type="submit" className="addTask" > + </button>
+      <button type="submit" className="addTask" onClick={this.createNewToDoItem} onKeyPress={this.handleKeyPress}> + </button>
       </div>
       <div className="tasks">
-        {this.state.list.map(i =><li key={i}>i</li>)}
+      <ul>
+      {this.state.list.map(todo =><li key={todo}></li>)} <button type="submit" deleteItem={this.deleteItem.bind(this)}>X</button>
+      </ul>
+       
       </div>
     </div>
   );
