@@ -1,53 +1,57 @@
 .App{
-  margin: 5rem;
   padding: 2rem;
   box-sizing: 30%;
   text-align: center;
   display: inline;
 
 }
-.task{
-  margin-top: 5rem;
+
+.header{
+  background: #f2f2f2;
+  padding: 10px;
 }
-.inputTask{
-  width: 30%;
+.header h3{
+  color: #123a94;
+}
+.task{
+  margin-top: 2rem;
+  display: block;
+}
+input[type="text"]{
+  width: 25%;
   background: #f0f3f3;
   font-size: 16px;
   border: 2px solid #30d1c9;
   border-radius: 5px;
   padding: 5px;
+  display:inline-block;
 
 }
-
 
 .addTask{
   background: #30d1c9;
-  font-size: 26px;
-  border: 2px solid #30d1c9;
+  border: none;
   border-radius: 7px;
-  margin-top: 45px;
-  margin-left: 2px;
-  cursor: pointer;
   color: #f0f3f3;
-  padding: auto;
-}
-
-.addTask:hover, .addTask:focus, .addTask:active{
-  
-  background: #047786; 
-  border: 2px solid #047786;
-  color: #23f53f;
+  display: inline-block;
+  margin-left: 2px;
+  margin-bottom: 4px;
 }
 .tasks{
-  margin: 5rem;
+  margin: 3em auto;
+  width: 50%;
 }
 .tasks ul li{
   list-style-type: decimal;
   font-size: 14px;
   color: #073561;
 }
-.tasks{
-  
-  background-color: #f1f1f1;
+
+.todo-list{
+  display: block;
+  text-align: justify !important;
 }
 
+.todo-list li{
+  margin: 10px;
+}
